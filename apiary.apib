@@ -5,14 +5,13 @@ HOST: http://api.laterooms.com/seocontent/seocontent
 API to retrieve SEO Content details
 
 ## Get SEO Content [/?page=&pageLocation=&objectId=&language=]
-Retrieve SEO Content details for a given page.
+Retrieve SEO Content details for a given page. Results vary on Accept-Language header.
 
 + Parameters
     + page (required, string, `keyword`) ... Page to retrieve data for.
     + pageLocation (optional, string, `h1`) ... Field of the page to retrieve data for.
     + objectId (optional, int, `0`) ... Supply a relevant ID for the page. For example a keyword ID if the `page` is `keyword`, Hotel ID if the `page` is `hotel-reservations`. Defaults to zero.
-    + language (optional, int, `1`) ... Language ID. Defaults to 1.
-    
+
 
 ### Retrieve SEO Content [GET]
 + Response 200 (application/json)
