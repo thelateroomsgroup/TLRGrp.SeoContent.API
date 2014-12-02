@@ -4,13 +4,14 @@ HOST: http://api.laterooms.com/seocontent/seocontent
 # TLRG Seo Content API
 API to retrieve SEO Content details
 
-## Get SEO Content [/?page=&pageLocation=&objectId=&language=]
+## Get SEO Content [/?page=&pageLocation=&objectId=&areaId=]
 Retrieve SEO Content details for a given page. Results vary on Accept-Language header.
 
 + Parameters
     + page (required, string, `keyword`) ... Page to retrieve data for.
     + pageLocation (optional, string, `h1`) ... Field of the page to retrieve data for.
     + objectId (optional, int, `0`) ... Supply a relevant ID for the page. For example a keyword ID if the `page` is `keyword`, Hotel ID if the `page` is `hotel-reservations`. Defaults to zero.
+    + areaId (optional, int, `0`) ... Supply a relevant area ID for the SEO Footer links. Defaults to World `21686`.
 
 
 ### Retrieve SEO Content [GET]
@@ -24,5 +25,31 @@ Retrieve SEO Content details for a given page. Results vary on Accept-Language h
                         "pageLocation": "h1",
                         "value": "[town] Hotels"
                     }
-                ]
+                ],
+                "seoFooter": {
+                    "siblingAreas": {
+                        "items": []
+                    },
+                    "childAreas": {
+                        "title": "World",
+                        "items": [
+                            {
+                                "type": "Area",
+                                "id": 101,
+                                "name": "Europe",
+                                "friendlyName": "europe"
+                            }
+                        ]
+                    },
+                    "alternativeSearches": {
+                        "items": [
+                            {
+                                "type": "Keyword",
+                                "id": 13659368,
+                                "name": "Rome",
+                                "friendlyName": "rome"
+                            }
+                        ]
+                    }
+                }            
             }
