@@ -4,7 +4,7 @@ HOST: http://api.laterooms.com/seocontent/seocontent
 # TLRG Seo Content API
 API to retrieve SEO Content details
 
-## Get SEO Content [/?page=&pageLocation=&objectId=&areaId=]
+## Get SEO Content [/?page=&pageLocation=&objectId=&areaId=&sourceMarketId=]
 Retrieve SEO Content details for a given page. Results vary on Accept-Language header.
 
 + Parameters
@@ -12,6 +12,7 @@ Retrieve SEO Content details for a given page. Results vary on Accept-Language h
     + pageLocation (optional, string, `h1`) ... Field of the page to retrieve data for.
     + objectId (optional, int, `0`) ... Supply a relevant ID for the page. For example a keyword ID if the `page` is `keyword`, Hotel ID if the `page` is `hotel-reservations`. Defaults to zero.
     + areaId (optional, int, `0`) ... Supply a relevant area ID for the SEO Footer links. Defaults to World `21686`.
+    + sourceMarketId (optional, int, `1`) ... Supply a Source Market Id for the SEO Footer links. Defaults to En `1`.
 
 
 ### Retrieve SEO Content [GET]
